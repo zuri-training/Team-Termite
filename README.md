@@ -12,10 +12,22 @@ The internet provides users with the opportunity to carry out tasks without havi
 PriceAm is a web application that allows users to compare the price of IT gadgets/accessories across major online shopping stores.This web application creates a window for prospective buyers to an existing online store with a few clicks of the mouse. Hence, it could be likened to window shopping across several stores at the same time—helping users to make quality right decisions on best fit products at best prices.
 
 ## Features
-###Unauthenticated User
+### Unauthenticated User
  The user can visit the platform to view products information, pricing and reviews. The user also has access to view available products after interacting with the documentation. The user can browse through available products using the search feature, and also make enquiries about functionality after signing up for a newsletter with an email address. User can only access additional features after registering with their  Name, email address and password or using any other method like  through their Google account, Facebook account, or Twitter account.
 ### Authenticated User
  This user has full access to the platform after registering. The user can view previously searched products and see similar product recommendations. The user can leave comments under highlighted products and also interact with other users on products/price. The user can also add products to their watchlist on their dashboard giving them quick access to alerts on price changes on products of choice. The user has access to view the product's full information and view available sellers for desired products. The user can share product information on social media and mail.
  
  ## Technologies Used
+ ### Product Design
+   - Figma
+   - Figjam
+ ### Frontend Development
+   - HTML5
+   - CSS
+   - JavaScript
+   - Bootstrap
+### Backend Development
+   - Python
+   - Django
+ 
 
