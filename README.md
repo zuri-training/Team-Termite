@@ -1,11 +1,11 @@
 # PriceAm
 ## Table of Contents
-   - <a href="https://github.com/zuri-training/Team-Termite#Introduction">Introduction</a>
-   - Features
-   - Technologies Used
-   - Environment Setup/Installation Guide
-   - To Contribute
-   - Recommended Links
+   - <a href="https://github.com/zuri-training/Team-Termite##Introduction">Introduction</a>
+   - <a href="https://github.com/zuri-training/Team-Termite##Features">Features</a>
+   - <a href="https://github.com/zuri-training/Team-Termite##Technologies Used">Technologies Used</a>
+   - <a href="https://github.com/zuri-training/Team-Termite##Environment Setup/Installation Guide">Environment Setup/Installation Guide</a>
+   - <a href="https://github.com/zuri-training/Team-Termite##To Contribute">To Contribute</a>
+   - <a href="https://github.com/zuri-training/Team-Termite##Recommended Links">Recommended Links</a>
 ## Introduction
 The internet provides users with the opportunity to carry out tasks without having to leave their homes. Activities like making purchases online become overwhelming due to variation in prices on the same products across different platforms(online stores). Therefore, it is imperative to get a platform which gives users the power to make the best and smart decision in respect to prices on products of choice.
 
