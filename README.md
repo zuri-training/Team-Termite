@@ -1,11 +1,11 @@
 # PriceAm
 ## Table of Contents
-   - Introduction
+   - <a href="https://github.com/zuri-training/Team-Termite#Introduction">Introduction</a>
    - Features
    - Technologies Used
    - Environment Setup/Installation Guide
-   - Contributors
    - To Contribute
+   - Recommended Links
 ## Introduction
 The internet provides users with the opportunity to carry out tasks without having to leave their homes. Activities like making purchases online become overwhelming due to variation in prices on the same products across different platforms(online stores). Therefore, it is imperative to get a platform which gives users the power to make the best and smart decision in respect to prices on products of choice.
 
@@ -68,7 +68,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-## To contribute:
+## To Contribute
 
 - Create a Fork of this repository
 
@@ -115,6 +115,11 @@ git push origin {branchname}
 ```
     
 - Come to Github and Create a new pull request. Add a description of what you have done.
+
+## Recommended Links
+- <a href="https://app.quickdatabasediagrams.com/#/d/1smmJO" target="_blank">Database Schema</a>
+- <a href="https://docs.google.com/document/d/1n3uDvnyK9Jy0EoOCXK6DvzdXekHqs_2kNNMZQelMB_E/edit?usp=sharing" target="_blank">Design Sketch</a>
+- <a href="https://github.com/zuri-training/Team-Termite" target="_blank">Github Repo link</a>
 
 
 
