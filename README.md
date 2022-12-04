@@ -35,7 +35,7 @@ git clone https://github.com/zuri-training/Team-Termite.git
 ```
 - Enter the project directory 
 ```
-cd price_compare_team_27
+cd team-termite
 ```
 - Create a virtual env
 ```
