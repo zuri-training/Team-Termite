@@ -5,6 +5,7 @@
    - Technologies Used
    - Environment Setup/Installation Guide
    - Contributors
+   - To Contribute
 ## Introduction
 The internet provides users with the opportunity to carry out tasks without having to leave their homes. Activities like making purchases online become overwhelming due to variation in prices on the same products across different platforms(online stores). Therefore, it is imperative to get a platform which gives users the power to make the best and smart decision in respect to prices on products of choice.
 
@@ -66,6 +67,54 @@ python manage.py createsuperuser
 ```
 python manage.py runserver
 ```
+
+## To contribute:
+
+- Create a Fork of this repository
+
+- Clone the forked repository
+```
+git clone https://github.com/zuri-training/Team-Termite.git 
+```
+
+- Open your code editor
+
+- Run your terminal
+
+- Add Upstream
+```
+git remote add upstream https://github.com/zuri-training/Team-Termite.git
+```
+
+- Create a branch
+```
+git branch {branchname}
+```
+
+- Switch to the branch
+```
+git checkout {branchname}
+```
+
+- Make your changes.
+
+- After finishing your tasks, Stage and commit to your branch using
+```
+git add .
+git commit -m " My Contribution "
+```
+
+- Merge the upstream changes with your current branch to prevent conflict.
+``` 
+git pull upstream {branchname}
+```
+
+- Push to the branch you’re working on
+```
+git push origin {branchname}
+```
+    
+- Come to Github and Create a new pull request. Add a description of what you have done.
 
 
 
