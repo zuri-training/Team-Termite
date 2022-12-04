@@ -3,9 +3,8 @@
    - Introduction
    - Features
    - Technologies Used
-   - Environment Setup
+   - Environment Setup/Installation Guide
    - Contributors
-   - How To Contribute
 ## Introduction
 The internet provides users with the opportunity to carry out tasks without having to leave their homes. Activities like making purchases online become overwhelming due to variation in prices on the same products across different platforms(online stores). Therefore, it is imperative to get a platform which gives users the power to make the best and smart decision in respect to prices on products of choice.
 
@@ -29,5 +28,46 @@ PriceAm is a web application that allows users to compare the price of IT gadget
 ### Backend Development
    - Python
    - Django
+## Environment Setup/Installation Guide
+- Clone the repo
+```
+git clone https://github.com/zuri-training/Team-Termite.git 
+```
+- Enter the project directory 
+```
+cd price_compare_team_27
+```
+- Create a virtual env
+```
+python -m venv env 
+```
+- Activate your env(for windows)
+```
+./env/Scripts/activate 	 
+```
+- (for linux or mac)
+```
+source env/bin/activate 
+``` 
+- Install Project Dependencies
+```
+pip install -r requirements.txt
+```
+- Make Migrations
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+- Create Superuser
+```
+python manage.py createsuperuser
+```
+- Run the server
+```
+python manage.py runserver
+```
+
+
+
  
 
