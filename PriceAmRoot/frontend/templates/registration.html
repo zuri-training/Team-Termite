@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body{
+            font-family: "Nunito", sans-serif;
+        }
+        #left{
+            position: relative;
+            width: 80vh;
+            height: 100vh;
+        }
+        .logo{
+            width:30%;   
+        }
+        .illustration{
+            width:90%;
+        }
+        #right{
+            height: 100vh;
+            width: 100vh;
+            background-color:rgb(255, 255, 255);
+        }
+        #right h2{
+            color:#048D4D;
+            font-size: 45px;   
+        }
+        #right p,#right label{
+            font-size: 22px;
+        }
+        #right button{
+            background-color: #048D4D;
+            color: antiquewhite; 
+            font-size: 22px;  
+        }
+        #right button:hover{
+            background-color: #04351e;}
+        span a{
+            color: #048D4D;
+        }
+        #icons a{
+            border: 1px solid rgb(56, 54, 54);
+            border-radius: 8px;
+            padding: 5px;
+            margin-bottom: 5px;
+            text-decoration: none;
+            color: #975023;
+            line-height: 32px;
+        }
+        #icons a:hover{
+            background-color: #975023;
+            color: antiquewhite;
+        }
+        input{
+            border:1px solid rgb(116, 114, 114);
+            background-color: rgb(243, 243, 240);
+            width:100%;
+            border-radius: 8px;
+            padding: 5px;
+            font-size: 22px;
+        }
+
+        @media screen and (max-width: 680px){
+            .container{
+                display:flex;
+                flex-direction:column;
+            }
+            #left{
+                width:100%;
+                
+            }
+            #right{
+                width:100%;
+                margin-top: 35px;
+                /* margin-bottom: 35px; */
+            }
+            input{
+                width:95%;
+            }
+            button{
+                width:95%;
+            }
+        }
+
+        @media screen and (max-width: 480px){
+            #icons{
+                display:flex;
+                flex-direction:column;
+                width:75%;
+            }
+        }
+       
+
+       
+    </style> 
+</head>
+<body>
+    <div class="d-flex container whole">
+        <div id="left" >
+            <div class="mt-4 ">
+                <img src="/PriceAmRoot/frontend/Assets/images/registration/logo.png" alt="priceam logo" class="img-fluid logo">
+            </div>
+            <p class="fs-2 me-5 mt-5 pt-4 ">
+                Check gadget prices from top online stores.
+            </p>
+            <hr class="w-75">
+            <div class="position-absolute ms-1 mt-4">
+                <img src="/PriceAmRoot/frontend/Assets/images/registration/Price_compare_illustration-removebg-preview 1.png" alt="" class="img-fluid illustration">
+            </div>
+            
+        </div>
+        <div id="right">
+            <div class="mt-5 ">
+                <h2 class="mb-4">
+                    Create Account
+                </h2>
+                <p class="w-100">
+                    Sign up to see prices of your favorite gadgets from different stores.
+                </p>
+                <div class="w-100 mb-5">
+                    <label for="" class="">Name</label>
+                    <input type="text" class="" id="" value="" required>
+                    <label for="" class="">Email</label>
+                    <input type="email" class="" id="" value="" required>
+                    <label for="" class="">Password</label>
+                    <input type="password" class="" id="" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <label for="" class="">Confirm Password</label>
+                    <input type="password" class="" id="" value="" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                    <button type="submit" class="btn mt-3 w-100 ">Create Account</button>
+                    <p class="text-end">Already have an account? <span><a href="login.html">Login</a></span></p>
+                    <p class="text-center">-OR-</p>
+                    <div class="d-flex justify-content-around mb-5" id="icons">
+                        <a name="" id="" href="#" role="button"><img src="/PriceAmRoot/frontend/Assets/images/registration/flat-color-icons_google.png" alt=""> Sign up with Google</a>
+                        <a name="" id="" href="#" role="button"><img src="/PriceAmRoot/frontend/Assets/images/registration/logos_facebook.png" alt=""> Sign up with Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
