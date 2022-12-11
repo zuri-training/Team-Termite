@@ -16,7 +16,7 @@ header{
     align-items: center;
     width: 100%;
     font-weight: 300;
-    background-color: lightcyan;
+    background-color: #2fb777;
     font-family: 'Nunito';
 
 
@@ -76,7 +76,7 @@ margin-left: 400px;
     position: relative;
     width: 400px;
     height: 300px;
-    background: #f8eeec;
+    background: lightgrey;
     margin: 40px 10px;
     padding: 30px 20px;
     border-radius: 20px;
@@ -190,6 +190,6 @@ font-size: 1.1rem;
     
 }
 .nav ul li a:hover{
-    background-color: cyan;
+    background-color: #2fb777;
     height: 2px;
 }
