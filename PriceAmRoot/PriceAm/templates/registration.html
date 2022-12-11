@@ -59,6 +59,20 @@
             background-color: #975023;
             color: antiquewhite;
         }
+
+        #aaa{
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 10px;
+            font-size: 25px;
+            
+          }
+
+        #aaa a{
+            text-decoration:none;
+        }
+
+     
         input{
             border:1px solid rgb(116, 114, 114);
             background-color: rgb(243, 243, 240);
@@ -120,6 +134,7 @@
         </div>
         <div id="right">
             <div class="mt-5 ">
+                <div id="aaa"><a href="{% url 'users:index'%}" class="login">Home</a></div>
                 <h2 class="mb-4">
                     Create Account
                 </h2>

@@ -43,6 +43,13 @@
         width: 100vh;
         height: 100vh;
       }
+
+      #aaa{
+        display: inline-block;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 25px;
+      }
       .btn{
         background-color: #048D4D;
         color: antiquewhite; 
@@ -112,7 +119,10 @@
   </head>
   <body>
     <div class="d-flex" id="whole">
+     
       <div id="left">
+        <div id="aaa"><a href="{% url 'users:index'%}" class="login">Home</a></div>
+        
         <img
           src="{% static 'images/registration/Girl riding a skateboard with shopping bags in her hand.png' %}"
           alt=""
