@@ -1,3 +1,4 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,7 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap'); </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}"
 </head>
 <body>
      
@@ -23,22 +24,23 @@
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="#"onclick="alert('Please Login to access the page')" disabled>Deals</a></li>
-                <li><a href="#" onclick="alert('Please Login to access the page')">Categories</a></li>
-                <li><a href="#"onclick="alert('Please Login to access the page')">Stores</a></li>
-                <li><a href="#"onclick="alert('Please Login to access the page')">Price-Tracker</a></li>
-                <li><a href="{% url 'login'%}" class="login">Login</a></li>
+                <li><a href="#">Deals</a></li>
+                <li><a href="#" >Categories</a></li>
+                <li><a href="#">Stores</a></li>
+                  <li><p style="font-size:20px;">Welcome, {{user.username}}</p></li>
+                  <li><a href="#">My Dashboard <img src="{% static 'images/landingpage/Vector.png'%}" style="width:15%"></a></li>
+                  <li><a href="{% url 'logout' %}" class="login">Logout</a></li>
             </ul>
         </nav>
 
 
-</div>
+      </div>
     </div>
     <div class="row container">
     <div class="col-2" >
         <h1>Get The Best Value For <br>Your Money</h1>
         <p>Do you need a gadget and you don’t know the right place<br> to shop at?.... Priceam helps you find the right stores to <br>patronize.</p>
-<a href="{% url 'users:register'%}" class="btn">Get Started</a>
+
     </div>
     <div class="col-2">
 <img src="{% static 'images/landingpage/ladyshopping.png'%}" style="width:95%;">
@@ -115,18 +117,18 @@
         
         </div>
         <div class="col-4">
-            <img src="{% static 'images/landingpage/A12.png'%}">
-            <h4>Samsung Galaxy A12</h4>
-            <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-                <i class="fa fa-star-o"></i>
-            </div>
-            <p>$125-$150<i class="fa fa-long-arrow-right" ></i></p>
-        
-        </div>
+          <img src="{% static 'images/landingpage/A12.png'%}">
+          <h4>Samsung Galaxy A12</h4>
+          <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+          </div>
+          <p>$125-$150<i class="fa fa-long-arrow-right" ></i></p>
+      
+      </div>
     </div>
     
  
@@ -236,7 +238,7 @@
 
  <footer class="footer-col">
     <div>
-        <h2><a href="{% url 'users:faqs'%}">FAQs </a></h2>
+      <h2><a href="{% url 'users:faqs'%}">FAQs </a></h2>
         <a href="{% url 'users:faqs'%}">Help Center </a><br>
         <a href="#">Contact Us</a><br> 
         <a href="{% url 'users:faqs'%}">How to Shop on priceam</a><br>

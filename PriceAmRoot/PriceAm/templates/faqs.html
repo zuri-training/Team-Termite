@@ -1,0 +1,539 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    {% comment %} <link rel="stylesheet" href="{% url 'users:css/faqs.css' %}"> {% endcomment %}
+    <script src="https://kit.fontawesome.com/d1950907f3.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        height: calc(100vh + 1);
+        width: 100%;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+    
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+    
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #000;
+        display: block;
+        transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+        color: #2FB777;
+    }
+    
+    .sidenav a:active {
+        color: #2FB777;
+        text-decoration-line: underline;
+    }
+    
+    .sidenav .login {
+        color: #2FB777;
+        width: 100px;
+        border: 2px solid #2FB777;
+        border-radius: 8px;
+        font-size: 20px;
+        padding: 10px 23px;
+        margin: 10px 30px;
+    }
+    
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+    
+    #main {
+        transition: margin-left .5s;
+    }
+    
+    .first {
+        background-color: #2FB777;
+        color: #fff;
+        height: 400px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .first .faq {
+        font-family: 'Nunito';
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        margin: 20px auto;
+    }
+    
+    .first .ask {
+        width: 300px;
+        font-family: 'Nunito';
+        font-size: 36px;
+        font-weight: 700;
+        text-align: center;
+    }
+    
+    .first .every {
+        font-family: 'Nunito';
+        font-size: 20px;
+        font-weight: 500;
+        margin: 15px auto;
+        text-align: center;
+    
+    }
+    
+    /* .first .icon{
+    
+    } */
+    
+    .first input {
+        width: 375px;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 13px 16px;
+        gap: 10px;
+        border: 1px solid #B4B4B4;
+        border-radius: 8px;
+        outline: none;
+    }
+    
+    input::placeholder {
+        width: 123px;
+        height: 24px;
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 16px;
+        color: #D2D2D2;
+    }
+    
+    .second {
+        color: #000;
+        display: flex;
+        height: 750px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .second .col {
+        height: 331px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+        gap: 3rem;
+    }
+    
+    .second .head {
+        font-family: 'Nunito';
+        font-size: 24px;
+        font-weight: 700;
+        margin: 10px auto;
+        padding: 10px 20px;
+    
+    }
+    
+    .second .col .wrapper .parent-tab {
+        margin-bottom: 8px;
+    }
+    
+    .wrapper .parent-tab label {
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 99;
+        transition: all 0.3s ease;
+        gap: 2rem;
+    }
+    
+    .wrapper label span {
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 20px;
+        width: 250px;
+    }
+    
+    .wrapper .parent-tab label .icon {
+        position: relative;
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        color: #000000;
+        display: block;
+        background: transparent;
+        border: 1px solid;
+        border-radius: 50%;
+        text-shadow: 0 -1px 1px;
+    }
+    
+    .parent-tab label .icon i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .parent-tab input:checked~label .icon i:before {
+        content: '\f068';
+    }
+    
+    .parent-tab .content {
+        max-height: 0px;
+        overflow: hidden;
+        transition: all 0.4s ease;
+    }
+    
+    .parent-tab input:checked~.content {
+        max-height: 100vh;
+    }
+    
+    .second .col .wrapper .parent-tab .content p {
+        padding: 15px 20px;
+        font-family: 'Nunito';
+        font-weight: 500;
+        font-size: 16px;
+    }
+    
+    input[type="radio"] {
+        display: none;
+    }
+    
+    .contactus {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 200px;
+        margin: 90px 40px 0;
+        background: #82D4AD;
+    }
+    
+    .contactus .contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contactus .contact .head {
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 24px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    
+    .contactus .contact .body {
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 16px;
+        color: #FFFFFF;
+        margin-top: 10px;
+    }
+    
+    .contactus .button {
+        padding: 18px 20px;
+        width: 132px;
+        height: 60px;
+        background: #05A95C;
+        border-radius: 8px;
+        margin-top: 25px;
+    }
+    
+    .contactus .button a {
+        width: 92px;
+        height: 24px;
+        font-family: 'Nunito';
+        font-weight: 700;
+        font-size: 18px;
+        text-decoration: none;
+        color: #FAFAFB;
+    }
+    
+    
+    @media only screen and (min-width: 768px) {
+        .navbar {
+            padding: 2.5rem 11rem;
+        }
+    
+        .first {
+            height: 350px;
+        }
+    
+        .first .faq {
+            margin: 40px auto;
+        }
+    
+        .first .ask {
+            width: 402px;
+        }
+    
+        .second {
+            height: 400px;
+        }
+    
+        .second .col {
+            height: 331px;
+            width: 407px;
+            display: flex;
+            flex-direction: row;
+            text-align: left;
+            gap: 10rem;
+        }
+    
+        .wrapper .parent-tab label {
+            justify-content: space-between;
+            gap: 0;
+        }
+    
+        .wrapper label span {
+            width: 382px;
+        }
+    
+        .wrapper .parent-tab .content p {
+            width: 465px;
+        }
+    
+        .contactus {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 40rem;
+            width: 1201px;
+            height: 146px;
+            margin: 90px auto 0;
+            background: #82D4AD;
+        }
+    
+        .contactus .contact {
+            align-items: flex-start;
+        }
+    }
+</style>
+
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="../Assets/images/dashboard/logo.png" alt="">
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{% url 'users:index' %}">Home</a>
+            <a href="#">Deals </a>
+            <a href="#">Categories</a>
+            <a href="#">Stores</a>
+            <a href="#">Price Tracker</a>
+            <a href="{% url 'login' %}" class="login">Login</a>
+        </div>
+        <div id="main">
+            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        </div>
+    </div>
+    <!--  navbar ends -->
+
+    <!-- First section -->
+    <section class="first">
+        <p class="faq">FAQs</p>
+        <p class="ask">Have Questions? Ask us</p>
+        <p class="every">Everything you need to know about Priceam...</p>
+        <div class="search">
+            <div class="icon">
+                <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
+            </div>
+            <div class="input">
+                <input type="text" name="search" placeholder="Search question...">
+            </div>
+        </div>
+    </section>
+    <!-- First section ends -->
+
+    <!-- Second section -->
+    <section class="second">
+        <div class="col">
+            <div class="wrapper">
+                <!-- Accordion Heading One -->
+                <div class="parent-tab">
+                    <p class="head">General</p>
+
+                    <input type="radio" name="tab" id="tab-1" checked>
+                    <label for="tab-1">
+                        <span>What is PriceAm ?</span>
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                    </label>
+                    <div class="content">
+                        <p>PriceAm is a price comparision platform aimed at providing
+                            users with budget - friendly deals by comparing prices
+                            of different brands offering a product.</p>
+                    </div>
+                </div>
+
+                <!-- Accordion Heading Two -->
+                <div class="parent-tab">
+                    <input type="radio" name="tab" id="tab-2">
+                    <label for="tab-2">
+                        <span>How do I shop on PriceAm?</span>
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                    </label>
+                    <div class="content">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod animi fugiat dicta iure?
+                            Neque perspiciatis recusandae unde animi, nam at pariatur?</p>
+                    </div>
+                </div>
+
+                <!-- Accordion Heading Three -->
+                <div class="parent-tab">
+                    <input type="radio" name="tab" id="tab-3">
+                    <label for="tab-3">
+                        <span>Where can I ask for Help?</span>
+                        <div class="icon"><i class="fas fa-plus"></i></div>
+                    </label>
+                    <div class="content">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod animi fugiat dicta iure?
+                            Neque perspiciatis recusandae unde animi, nam at pariatur?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="wrapper">
+                    <!-- Accordion Heading Four -->
+                    <div class="parent-tab">
+                        <p class="head">Account</p>
+
+                        <input type="radio" name="tab" id="tab-4">
+                        <label for="tab-4">
+                            <span>How do I register on PriceAm?</span>
+                            <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="content">
+                            <p>PriceAm is a price comparision platform aimed at providing
+                                users with budget - friendly deals by comparing prices
+                                of different brands offering a product.</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Heading Five -->
+                    <div class="parent-tab">
+                        <input type="radio" name="tab" id="tab-5">
+                        <label for="tab-5">
+                            <span>Can I change my current Email Address?</span>
+                            <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod animi fugiat dicta
+                                iure? Neque perspiciatis recusandae unde animi, nam at pariatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Heading Six -->
+                    <div class="parent-tab">
+                        <input type="radio" name="tab" id="tab-6">
+                        <label for="tab-6">
+                            <span>Is PriceAm free?</span>
+                            <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod animi fugiat dicta
+                                iure? Neque perspiciatis recusandae unde animi, nam at pariatur?</p>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Heading Seven -->
+                    <div class="parent-tab">
+                        <input type="radio" name="tab" id="tab-7">
+                        <label for="tab-7">
+                            <span>How do I track prices?</span>
+                            <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="content">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde quod animi fugiat dicta
+                                iure? Neque perspiciatis recusandae unde animi, nam at pariatur?</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Second section ends -->
+
+
+    <!-- Contact us section -->
+    <section class="contactus">
+        <div class="contact">
+            <p class="head">Need help?</p>
+            <p class="body">Get in touch with our support team.</p>
+        </div>
+        <div class="button">
+            <a href="#">Contact Us</a>
+        </div>
+    </section>
+    <!-- Contact us section ends -->
+    <script src="../Assets/scripts/faqs.js"></script>
+</body>
+
+
+<script>
+   function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        document.body.style.backgroundColor = "white";
+      }
+</script>
+
+</html>
