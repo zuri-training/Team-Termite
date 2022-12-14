@@ -143,7 +143,7 @@
                     Sign up to see prices of your favorite gadgets from different stores.
                 </p>
                 <form action="" method="POST">
-                    {% comment %} {% csrf_token %} {% endcomment %}
+                    {% csrf_token %}
                 <div class="w-100 mb-5">
                     {% comment %} {{ form.as_p }}  {% endcomment %}
                     <label for="" class="">Name</label>
