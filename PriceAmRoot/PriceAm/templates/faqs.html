@@ -9,6 +9,7 @@
     <title>FAQs</title>
     {% comment %} <link rel="stylesheet" href="{% url 'users:css/faqs.css' %}"> {% endcomment %}
     <script src="https://kit.fontawesome.com/d1950907f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
@@ -22,14 +23,16 @@
     body {
         height: calc(100vh + 1);
         width: 100%;
+        font-family: 'Nunito';
+
     }
     
-    .navbar {
+    {% comment %} .navbar {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         padding: 2.5rem;
-    }
+    } {% endcomment %}
     
     .sidenav {
         height: 100%;
@@ -299,10 +302,7 @@
     
     
     @media only screen and (min-width: 768px) {
-        .navbar {
-            padding: 2.5rem 11rem;
-        }
-    
+           
         .first {
             height: 350px;
         }
@@ -349,7 +349,7 @@
             gap: 40rem;
             width: 1201px;
             height: 146px;
-            margin: 90px auto 0;
+            margin: 90px auto ;
             background: #82D4AD;
         }
     
@@ -361,40 +361,55 @@
 
 <body>
     <!-- navbar -->
-    <div class="navbar">
-        <div class="logo">
-            <img src="../Assets/images/dashboard/logo.png" alt="">
+    <div class="header">
+        <div class="top-bar"><p class="p">!!!Jumia Black Friday Sales this November!!! Dont Miss it</p></div>
+        <div>
+        <div class="navbar">
+            <div class="container" >
+                
+                <nav>
+                    <ul id="nav">
+                        <div>
+                            <img src="{% static 'images/registration/logo.png'%}" >
+                        </div>
+                        <div><li><a href="{% url 'users:index'%}">Home</a></li>
+                            <li><a href="#">Deals</a></li>
+                            <li><a href="{% url 'users:category'%}" >Categories</a></li>
+                            <li><a href="#">Stores</a></li></div>
+                        
+                        <div>{% if request.user.is_authenticated %}
+                            <li><a href="#">{{user.username}}'s Dashboard <img src="{% static 'images/landingpage/Vector.png'%}" style="width:15%"></a></li>
+                             <li><a href="{% url 'logout' %}" class="login">Logout</a></li>
+                             {% else %}
+                            <li><a href="{% url 'users:register'%}" >signup</a></li
+                            <li><a href="{% url 'login'%}" class="login">Login</a></li> {% endif %}
+                        </div>
+                        
+                    </ul>
+                </nav>
+            </div>
         </div>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="{% url 'users:index' %}">Home</a>
-            <a href="#">Deals </a>
-            <a href="#">Categories</a>
-            <a href="#">Stores</a>
-            <a href="#">Price Tracker</a>
-            <a href="{% url 'login' %}" class="login">Login</a>
-        </div>
-        <div id="main">
-            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+        
+    
+           
+    <div class ="bgc" style ="background :url({% static 'images/landingpage/53.png'%}),#2FB777;background-blend-mode: multiply; background-size:cover;
+    background-position :left;">
+        <p>
+            Home => FAQs
+        </p>
+        <div class ="bgcenter">
+            <h1>
+                Frequently Asked Questions 
+            </h1>
+            <p>
+                Everything you need to know about PriceAm
+            </p>
         </div>
     </div>
     <!--  navbar ends -->
 
-    <!-- First section -->
-    <section class="first">
-        <p class="faq">FAQs</p>
-        <p class="ask">Have Questions? Ask us</p>
-        <p class="every">Everything you need to know about Priceam...</p>
-        <div class="search">
-            <div class="icon">
-                <!-- <i class="fa fa-search" aria-hidden="true"></i> -->
-            </div>
-            <div class="input">
-                <input type="text" name="search" placeholder="Search question...">
-            </div>
-        </div>
-    </section>
-    <!-- First section ends -->
+   
 
     <!-- Second section -->
     <section class="second">
@@ -514,9 +529,42 @@
             <p class="body">Get in touch with our support team.</p>
         </div>
         <div class="button">
-            <a href="#">Contact Us</a>
+            <a href="{% url 'users:contact'%}">Contact Us</a>
         </div>
     </section>
+
+    <div class="unknown">
+        <img src="{% static 'images/registration/whie.png'%}" >
+       
+    </div>
+
+ <footer class="footer-col">
+    <div>
+        <h3>Popular categories</h3>
+        <a href="#">Phones</a><br> 
+        <a href="#">Laptops</a><br>   
+    </div>
+    <div>
+        <h3>Popular Stores</h3>
+        <a href="#">Jumia</a><br>
+        <a href="#">Konga</a><br>
+        <a href="#">Amazon</a>
+    </div>
+    <div>
+        <h3><a href="{% url 'users:faqs'%}">FAQs </a></h3>
+        <a href="{% url 'users:testimony'%}">Testimony </a><br>
+        <a href="{% url 'users:contact'%}">Contact Us</a><br> 
+        <a href="{% url 'users:faqs'%}">How to Shop on priceam</a><br>
+        <a href="{% url 'users:faqs'%}">What is priceam</a><br>
+    </div>
+    <div>
+        <h3>Join us on</h3>
+        <a href="#"><img src="{% static 'images/registration/sm.png'%}" ></a><br>
+        <a href="#"><img src="{% static 'images/registration/sc.png'%}" ></a><br>
+        <a href="#"><img src="{% static 'images/registration/ss.png'%}" ></a>
+    </div>
+   
+    
     <!-- Contact us section ends -->
     <script src="../Assets/scripts/faqs.js"></script>
 </body>

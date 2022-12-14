@@ -67,3 +67,9 @@ def testimony(request):
 
 def faqs(request):
     return render(request, 'faqs.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def category(request):
+    return render(request, 'category.html')

@@ -1,52 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
 
-}
-header{
-    padding-left: 80px;
-    padding-right: 80px;
-    margin-top: 15px;
-}
-.navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-weight: 300;
-    background-color: lightcyan;
-    font-family: 'Nunito';
-
-
-}
-.icon{
-    width: 90%;
-    float: left;
-    padding-left: 20px;
-    height: 60px;
-
-}
-
-.navbar ul{
-    display: flex;
-    list-style: none;
-    margin: 20px 0px;
-}
-.navbar ul li{
-font-family: century;
-font-size: 1.1rem;
-}
-.navbar ul li a{
-    color: black;
-    text-decoration: none;
-    padding: 40px 25px;
-    
-}
-.navbar ul li a:hover{
-    background-color: white;
-}
 section{
     position: relative;
     min-height: 80vh;
@@ -122,7 +74,7 @@ margin-left: 400px;
     left: -45px;
 
 }
- p{
+ /* p{
     padding-top: 80px;
     text-align: center;
     font-size: 20px;
@@ -131,65 +83,4 @@ margin-left: 400px;
     font-family: 'Nunito'; 
     font-style: normal;
     font-weight: 500;
-}
-footer{
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 80px;
-}
-
-.nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    font-weight: 300;
-    background-color: coral;
-    top: 30px;
-    font-family: 'Nunito'; 
-    font-style: normal; 
- 
-}
-
-.search{
- float: left;
-  bottom: 10px;
-  padding-right: 0;
-  font-family: 'Nunito'; 
-    font-style: normal;
-}
-.srch{
-    width: 400px;
-    float: left;
-    left: auto;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    border-radius: 5px;
-    border-color: white;   
-    
-}
- ul{
-    display: flex;
-    list-style: none;
-    margin: 20px 0px;
-    color: white;
-    font-weight: 500;
-    font-size: larger;
-    font-family: Arial;
-    bottom: 4px;
-}
-.nav ul li{
-font-family: century;
-font-size: 1.1rem;
-}
-.nav ul li a{
-    color: white;
-    text-decoration: none;
-    padding: 48px 25px;
-    
-}
-.nav ul li a:hover{
-    background-color: cyan;
-    height: 2px;
-}
+} */

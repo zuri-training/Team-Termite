@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>priceam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap'); </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+     
+    <div class="header">
+    <div class="top-bar"><p class="p">!!!Jumia Black Friday Sales this November!!! Dont Miss it</p></div>
+    <div>
+    <div class="navbar">
+        <div class="container" >
+            
+            <nav>
+                <ul id="nav">
+                    <div>
+                        <img src="{% static 'images/registration/logo.png'%}" >
+                    </div>
+                    <div><li><a href="{% url 'users:index'%}">Home</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="{% url 'users:category'%}" >Categories</a></li>
+                        <li><a href="#">Stores</a></li></div>
+                    
+                        <div>{% if request.user.is_authenticated %}
+                            <li><a href="#">{{user.username}}'s Dashboard <img src="{% static 'images/landingpage/Vector.png'%}" style="width:15%"></a></li>
+                             <li><a href="{% url 'logout' %}" class="login">Logout</a></li>
+                             {% else %}
+                            <li><a href="{% url 'users:register'%}" >signup</a></li
+                            <li><a href="{% url 'login'%}" class="login">Login</a></li> {% endif %}
+                        </div>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    
+
+       
+<div class ="bgc" style ="background :url({% static 'images/landingpage/bgc.png'%}),#2FB777;background-blend-mode: multiply; background-size:cover;
+background-position :left;">
+    <p>
+        Home => Contact
+    </p>
+    <div class ="bgcenter">
+        <h1>
+            Contact us 
+        </h1>
+        <p>
+            Get in touch with our support team.
+        </p>
+    </div>
+</div>
+
+<div style ="background:#f3f8f5;" class="main">
+    <div class="submain">
+       
+        <div>
+            <label>
+                Your  Name
+            </label>
+            <input type ="text" placeholder="Enter your full name">
+            <label>
+                Your  Message
+            </label> 
+              <textarea  name="" id="" rows="6" placeholder="Tell us your message"></textarea>
+              <a href="#" class="btn">Send Message</a>
+        </div>
+         <div class="sub">
+            <h3>Meet us</h3>
+            <ul>
+                <li><img src="{% static 'images/landingpage/lp.png'%}"><span>0801 2345 6789</span></li>
+                <li><img src="{% static 'images/landingpage/email.png'%}"><span>enquiries@priceam.ng</span></li>
+                <li><img src="{% static 'images/landingpage/loca.png'%}"><span>Plot 360, Suite 5, O'Neal Complex, 
+                    Utako District, Jabi, Abuja
+                    </span></li>
+            </ul>
+            <h3>Join us</h3>
+            <ul>
+                <li><img src="{% static 'images/landingpage/facebook.png'%}"><a href="#">Facebook</a></li>
+                <li><img src="{% static 'images/landingpage/twitter.png'%}"><a href="#">Twitter</a></li>
+                <li><img src="{% static 'images/landingpage/linkedin.png'%}"><a href="#">LinkedIN</a></li>
+            </ul>
+        </div>
+        
+    </div> 
+</div>
+
+
+    <div class="unknown">
+        <img src="{% static 'images/registration/whie.png'%}" >
+       
+    </div>
+
+ <footer class="footer-col">
+    <div>
+        <h3>Popular categories</h3>
+        <a href="#">Phones</a><br> 
+        <a href="#">Laptops</a><br>   
+    </div>
+    <div>
+        <h3>Popular Stores</h3>
+        <a href="#">Jumia</a><br>
+        <a href="#">Konga</a><br>
+        <a href="#">Amazon</a>
+    </div>
+    <div>
+        <h3><a href="{% url 'users:faqs'%}">FAQs </a></h3>
+        <a href="{% url 'users:testimony'%}">Testimony </a><br>
+        <a href="#">Contact Us</a><br> 
+        <a href="{% url 'users:faqs'%}">How to Shop on priceam</a><br>
+        <a href="{% url 'users:faqs'%}">What is priceam</a><br>
+    </div>
+    <div>
+        <h3>Join us on</h3>
+        <a href="#"><img src="{% static 'images/registration/sm.png'%}" ></a><br>
+        <a href="#"><img src="{% static 'images/registration/sc.png'%}" ></a><br>
+        <a href="#"><img src="{% static 'images/registration/ss.png'%}" ></a>
+    </div>
+   
+    
+    
+   
+</footer>
+</body>
+
+
+</html>
