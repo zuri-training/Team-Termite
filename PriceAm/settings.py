@@ -128,3 +128,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = "index"
 LOGOUT_REDIRECT_URL = "index"
+
+
+
+CSRF_TRUSTED_ORIGINS = ['https://team-termite-1-production.up.railway.app/']
