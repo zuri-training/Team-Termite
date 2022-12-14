@@ -133,4 +133,4 @@ LOGOUT_REDIRECT_URL = "index"
 
 
 
-CSRF_TRUSTED_ORIGINS = ['https://*.up.railway.app/']
+CSRF_TRUSTED_ORIGINS = ['https://team-termite-1-production.up.railway.app/']
