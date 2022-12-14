@@ -11,66 +11,81 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Nunito:ital,wght@1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap'); </style>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
      
     <div class="header">
-    <div class="top-bar "><p class="moving-tex"><span>!!!Jumia Black Friday Sales this November!!! Dont Miss it</span></p></div>
-    <div class="container">
+    <div class="top-bar"><p class="p">!!!Jumia Black Friday Sales this November!!! Dont Miss it</p></div>
+    <div>
     <div class="navbar">
-                   <img src="{% static 'images/registration/logo.png'%}" >
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#"onclick="alert('Please Login to access the page')" disabled>Deals</a></li>
-                <li><a href="#" onclick="alert('Please Login to access the page')">Categories</a></li>
-                <li><a href="#"onclick="alert('Please Login to access the page')">Stores</a></li>
-                <li><a href="#"onclick="alert('Please Login to access the page')">Price-Tracker</a></li>
-                <li><a href="{% url 'login'%}" class="login">Login</a></li>
-            </ul>
-        </nav>
-
-
-</div>
-    </div>
-    <div class="row container">
-    <div class="col-2" >
-        <h1>Get The Best Value For <br>Your Money</h1>
-        <p>Do you need a gadget and you don’t know the right place<br> to shop at?.... Priceam helps you find the right stores to <br>patronize.</p>
-<a href="{% url 'users:register'%}" class="btn">Get Started</a>
-    </div>
-    <div class="col-2">
-<img src="{% static 'images/landingpage/ladyshopping.png'%}" style="width:95%;">
-    </div>
-</div>
-</div>
-</div>
-
-<div class="categories">
-    <div class="small-container">
-        <h2 class="title">Popular Searches</h2>
-    <div class="row">
-        <div class="col-3 ">
-            <img src="{% static 'images/landingpage/Camon191.png'%}">
-            <h4>Tecno camon 19</h4>
-            <p>$123.25-$140.75</p>
+        <div class="container" >
+            
+            <nav>
+                <ul id="nav">
+                    <div>
+                        <img src="{% static 'images/registration/logo.png'%}" >
+                    </div>
+                    <div><li><a href="#">Home</a></li>
+                        <li><a href="#"onclick="alert('Please Login to access the page')" disabled>Deals</a></li>
+                        <li><a href="{% url 'users:category'%}" >Categories</a></li>
+                        <li><a href="#"onclick="alert('Please Login to access the page')">Stores</a></li></div>
+                    
+                    <div><li><a href="{% url 'users:register'%}" >signup</a></li
+                        <li><a href="{% url 'login'%}" class="login">Login</a></li></div>
+                    
+                </ul>
+            </nav>
         </div>
-    
-        <div class="col-3"><img src="{% static 'images/landingpage/HPlaptop1.png'%}"><h4>Hp notebook laptop 14</h4>
-            <p>$923.25-$1240.75</p>
-        </div>
-        
-        <div class="col-3"><img src="{% static 'images/landingpage/HPnotebooklaptop141.png'%}"><h4>Hp pavilon laptop 15</h4>
-            <p>$923.25-$1040.75</p>
-        </div>
-        <div class="btn-2"><a href="" >View more</a></div>
+       
+
+
+</div>
     </div>
-    
+    <div style ="background: linear-gradient(7.08deg, rgba(227, 120, 52, 0.24) -31.5%, rgba(255, 255, 255, 0) 94.63%);
+    ">
+        <div class="row container">
+            <div class="col-2" >
+                <h1>Get The Best Value For <br>Your Money</h1>
+                <p>Do you need a gadget and you don’t know the right place<br> to shop at?.... Priceam helps you find the right stores to <br>patronize.</p>
+        <a href="{% url 'users:register'%}" class="btn">Get Started</a>
+            </div>
+            <div class="col-2">
+        <img src="{% static 'images/landingpage/ladyshopping.png'%}" style="width:95%;">
+            </div>
+        </div>
+    </div>
+
+<div style ="background: #f3f8f5;height :140px;padding :40px 0;">
+    <div class=" filter">
+        <div>
+            <label>I’m looking for</label><br>
+            <input type="text" placeholder="Enter keyword">
+        </div>
+        <div>
+            <label>Brands</label><br>
+            <select>
+                <option>All brands</option>
+                <option>Amazon</option>
+                <option>Jumia</option>
+                <option>Konga</option>
+            </select>
+        </div>
+        <div>
+            <label>Category </label><br>
+            <select>
+                <option>Mobile Phones</option>
+                <option>Laptops</option>
+            </select>
+        </div>
+        <input type="submit"  id ="btn1">
+    </div>
+</div>
 
 
-</div>
-</div>
+
+
+
  
 <div class="small-container" style="background-color:#f3f8f5;">
     <h2 class="title">Featured Products</h2>
@@ -128,6 +143,24 @@
         
         </div>
     </div>
+
+<div> 
+    <div class=" container" id="total"> 
+        <div  id="left"> 
+            <h2>
+                Jumia Christmas Sales!<br> Up to 50% off* 
+            </h2>
+            <p>
+                Create an account to access our specially<br> curated list of best deals from<br> trusted vendors and so much more. 
+
+            </p>
+            <a href="{% url 'users:register'%}" class="btn">Create Account</a>
+        </div>
+        <div id="right" > 
+            <img src="{% static 'images/landingpage/ma.png'%}">
+        </div>
+    </div>
+</div>
     
  
 <h2 class="title">Top Deals</h2>
@@ -189,7 +222,7 @@
 </div>
 </div>
 
-<div class="titless"><h3><a href="{% url 'users:testimony'%}">Testimony</a></h3></div>
+
 
 <div class="b4footer">
     <div class="titles">
@@ -199,9 +232,12 @@
 <div class="top-brands">
 
     <div class="brands">
-        <div class="small-container">
+        {% comment %} <div class="small-container"> {% endcomment %}
         <div class="row brandss fluid-container">
-            <div class="col-5">
+<div class="col-5">
+    <img src="{% static 'images/landingpage/jiji2.png'%}">
+</div>
+<div class="col-5">
     <img src="{% static 'images/landingpage/infinix.png'%}">
 </div>
 <div class="col-5">
@@ -209,6 +245,9 @@
 </div>
 <div class="col-5">
     <img src="{% static 'images/landingpage/jumia.png'%}">
+</div>
+<div class="col-5">
+    <img src="{% static 'images/landingpage/jiji.png'%}">
 </div>
 
         </div>
@@ -230,35 +269,39 @@
 </div>
 
     <div class="unknown">
-        <img src="{% static 'images/registration/logo.png'%}" >
-        <input type="search" placeholder="Search for products, brands and categories...">
+        <img src="{% static 'images/registration/whie.png'%}" >
+       
     </div>
 
  <footer class="footer-col">
     <div>
-        <h2><a href="{% url 'users:faqs'%}">FAQs </a></h2>
-        <a href="{% url 'users:faqs'%}">Help Center </a><br>
-        <a href="#">Contact Us</a><br> 
-        <a href="{% url 'users:faqs'%}">How to Shop on priceam</a><br>
-        <a href="{% url 'users:faqs'%}">What is priceam</a><br>
-    </div>
-    <div>
         <h3>Popular categories</h3>
         <a href="#">Phones</a><br> 
-        <a href="#">Laptops</a><br>
-        
-        
+        <a href="#">Laptops</a><br>   
     </div>
     <div>
-        <h3>Popular Brands</h3>
+        <h3>Popular Stores</h3>
         <a href="#">Jumia</a><br>
         <a href="#">Konga</a><br>
         <a href="#">Amazon</a>
     </div>
-    
-    <div class="last-row">
-        <span style="font-size: 17px;">&#169</span> 2022 priceam.com. All Rights Reserved
+    <div>
+        <h3><a href="{% url 'users:faqs'%}">FAQs </a></h3>
+        <a href="{% url 'users:testimony'%}">Testimony </a><br>
+        <a href="{% url 'users:contact'%}">Contact Us</a><br> 
+        <a href="{% url 'users:faqs'%}">How to Shop on priceam</a><br>
+        <a href="{% url 'users:faqs'%}">What is priceam</a><br>
     </div>
+    <div>
+        <h3>Join us on</h3>
+        <a href="#"><img src="{% static 'images/registration/sm.png'%}" ></a><br>
+        <a href="#"><img src="{% static 'images/registration/sc.png'%}" ></a><br>
+        <a href="#"><img src="{% static 'images/registration/ss.png'%}" ></a>
+    </div>
+   
+    
+    
+   
 </footer>
 </body>
 
