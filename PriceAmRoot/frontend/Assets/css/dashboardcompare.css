@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    padding-left: 0%;
+}
+
+header{
+    display: flex;
+    background-color: #fff;
+    align-items: stretch;
+    justify-content: space-around;
+    height: 100px;
+    /* position: relative; */
+    color:rgb(88, 88, 88);
+}
+.logo{
+    top: 20px;
+    left: 90px;
+    padding: 0;
+    flex-grow: 0;
+    position: absolute;
+    align-self: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:180px ;
+    height: 43.9987907409668px;
+
+
+}
+.svg{
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    position: relative;
+}
+.div3{
+    display: flex;
+    gap: 9%;
+}
+
+.link{
+    display: flex;
+    top:34px;
+    left: 406px;
+    width: 399px;
+    /* position: absolute; */
+    align-items: center;
+    justify-content: space-between;
+
+}
+.link p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #555555;
+}
+
+.main {
+    height: 900px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    width: 302px;
+    height: 844px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin: 20px 60px 20px 40px;
+}
+
+.first .head p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 10px 0 0 20px;
+}
+
+.first .category {
+    width: 254px;
+    height: 194px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    overflow-y: scroll;
+    background: #F5FCF8;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.first .category .item {
+    display: flex;
+    flex-direction: column;
+    padding: 4px 121px 4px 24px;
+    gap: 24px;
+    width: 254px;
+    height: 30px;
+
+}
+
+.first .category .item a {
+    text-decoration: none;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #000;
+}
+
+.first .category .item a:active {
+    padding: 4px 0px 4px 24px;
+    width: 254px;
+    background: #58C692;
+    border-radius: 8px;
+    color: #fff;
+
+}
+
+.first .head1 p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 50px 0 0 20px;
+}
+
+
+.first .brands {
+    width: 254px;
+    height: 244px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background: #F5FCF8;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 4px 121px 4px 24px;
+
+}
+
+.first .brands label {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+    width: 254px;
+    height: 293px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+input[type="search"] {
+    width: 206px;
+    height: 90px;
+    margin: 15px auto;
+    background: #FAFBFC;
+    border: 2px solid #E0E4EC;
+    border-radius: 8px;
+}
+
+.first .pricerange {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.first .pricerange .price {
+    width: 254px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.first .pricerange .price p {
+    width: 105.39px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 15px;
+    background: #FAFBFC;
+    border: 2px solid #CDEEDE;
+    border-radius: 8px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #05A95C;
+    
+}
+
+.second {
+    width: 954px;
+    height: 844px;
+    overflow-y: scroll;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.second .head {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+    margin:30px auto 20px 25px ;
+}
+
+.second .body {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #555555;
+    margin: auto auto 20px 25px ;
+}
+
+.second .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    width: 908px;
+    height: 1108px;
+    margin-left: 25px;
+}
+
+.second .card {
+    width: 908px;
+    height: 259px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    background: #F5FCF8;
+    border-radius: 8px;
+}
+
+.second .card .img {
+    width: 210px;
+    height: 210px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.second .card .details .product-name {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #555555;
+    margin-top: 20px;
+}
+
+.second .card .details .info {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #555555;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.second .card .details .info span {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    color: #555555;
+    margin-left: 180px;
+}
+
+.second .card .details ul li {
+    width: 580px;
+    /* height: 90px; */
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #555555;
+    margin-left: 30px;
+}
+
+.second .card .details .store-price {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-top: 25px;
+}
+
+.second .card .details .store-price .brand-price span {
+    margin-left: 10px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: #555555;
+}
+
+.second .card .details .store-price .brand-price .naira {
+    text-decoration: line-through;
+}
