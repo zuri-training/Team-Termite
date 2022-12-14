@@ -1,0 +1,54 @@
+
+body{
+    background-color: rgb(235, 230, 230)
+    ;
+}
+
+header{
+    display: flex;
+    background-color: #fff;
+    align-items: stretch;
+    justify-content: space-around;
+    position: relative;
+    color:rgb(88, 88, 88);
+    
+    
+
+}
+
+.logo{
+    top: 5px;
+    left: 30px;
+    padding: 0;
+    flex-grow: 0;
+    position: absolute; 
+    align-self: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:180px ;
+    height: 43.9987907409668px;
+    
+
+}
+.svg{
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    position: relative;
+}
+.div3{
+    display: flex;
+    gap: 9%;
+    line-height:%;
+}
+
+.link{
+    display: flex;
+    top:34px;
+    left: 406px;
+    width: 399px;
+    /* position: absolute; */
+    align-items: center;
+    justify-content: space-between;
+    
+}
