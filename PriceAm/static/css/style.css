@@ -55,6 +55,7 @@ body {
 
 #nav{
     display:flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     align-items :center;
 }
@@ -181,9 +182,11 @@ h6 {
 
 .filter {
     max-width: 800px;
-    height :80px;
+    min-height :80px;
+    max-height: 200px;
     margin:auto;
     display:flex;
+    flex-wrap: wrap;
     justify-content :space-between ;
     background-color: #ffffff;
     padding :10px 10px 30px;
@@ -358,6 +361,7 @@ h4 {
 }
 #total{
     display: flex;
+    
     margin: 0 150px;
 }
 
@@ -365,19 +369,21 @@ h4 {
     background: #FFFFFF;
     border-radius: 5px;
     width:60%;
-    height: 350px;
+    min-height: 350px;
+    max-height: 3000px;
     margin-right: 10px;
     padding: 25px;
     line-height: 35px;
-    position: relative;
+    
+   
 }
 #left p{
     margin-top: 15px;
     margin-bottom: 15px;
 }
 #left a{
-    position: absolute;
-    right: 10%;
+   justify-self:end;
+    
 }
 
 #right{
@@ -420,7 +426,10 @@ h4 {
 
 .brandss {
     background:  #ACE2C9B2;
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     padding: 20px;
 }
 
@@ -447,6 +456,7 @@ h4 {
     border: none;
     width: 550px;
     height: 50px;
+    margin-bottom:5px;
     border-radius: 8px;
     padding-left: 5px;
 }
@@ -528,6 +538,7 @@ h4 {
 .submain{
     
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     margin: auto;
@@ -535,7 +546,7 @@ h4 {
     border-radius: 8px;
     padding: 20px;
     /* margin: 40px 0 80px; */
-    width: 756px;
+    width: 60%;
 }
 
 .submain input, .submain textarea{
@@ -573,10 +584,13 @@ h4 {
 .half{
     border-radius: 5px;
     width:50%;
-    height: 330px;
+    /* min-height: 330px; */
     margin-right: 10px;
     padding: 15px;
     background-color: #ffffff;
+}
+.half img{
+    width:99%;
 }
 .half1{
     border-radius: 5px;
@@ -630,6 +644,7 @@ h4 {
         width: 100%;
         height: 330px;
         margin-bottom: 10px;
+
     }
     .half1{
         width: 100%;
@@ -655,12 +670,12 @@ h4 {
 
     #left{
         width: 100%;
-        height: 330px;
+        
         margin-bottom: 10px;
     }
     #right{
         width: 100%;
-        height: 330px;
+       
 }
 }
 
@@ -671,5 +686,37 @@ h4 {
 
 .half2 img{
     width:55%;}
+    .brandss{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #right img{width: 90%;}
+    .filter input[type="submit"]{
+        margin-top: 5px;
+    }
+.submain{
+    width: 90%;
+    flex-wrap: wrap;
+}
 
+}
+
+@media screen and (max-width:500px){
+    #right img{width: 100%;}
+    #left{
+        margin-bottom: 40px;
+}
+.brandss{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.subscribe input[type="text"]{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.half img{
+    width:100%;
+}
 }
