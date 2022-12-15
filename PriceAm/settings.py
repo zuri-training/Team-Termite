@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e&(7&1ojr!d9icqihg-l29)@c=ac0&z!htuo$3fno1)p30hmoc
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = ['https://team-termite-1-production.up.railway.app/'],
-ALLOWED_HOSTS = ['https://team-termite-1-production.up.railway.app/'],
+ALLOWED_HOSTS = ['team-termite-1-production.up.railway.app'],
 
 CORS_ORIGIN_WHITELIST = ['https://team-termite-1-production.up.railway.app/']
 
