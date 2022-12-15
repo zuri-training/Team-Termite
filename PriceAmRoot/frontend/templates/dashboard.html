@@ -44,14 +44,14 @@
                  <div class="userLocation">
                     <div >
                     <label for="Username">User Name</label><br><br>
-                    <input type="text" placeholder="Brooooch"></div>
+                    <input type="text" placeholder="Brooooch" class="box"></div>
                     <div>
                         <label for="Location">Location</label><br><br>
-                        <input type="text" placeholder="Lagos, Nigeria">
+                        <input type="text" placeholder="Lagos, Nigeria" class="box">
                     </div>
                  </div><br><br><br>
                  <label for="bio"> Bio</label><br><br>
-                 <textarea name="Tellus" id="" cols="53" rows="10" placeholder="Tell us about yourself"></textarea><br><br><br>
+                 <textarea name="Tellus" id="" cols="72" rows="10" placeholder="Tell us about yourself"></textarea><br><br><br>
 
                  <div class="button">
                     <input type="button" value="Reset" class="btn">
@@ -66,34 +66,37 @@
         <p>Change your account security details</p>
         <form action="">
             <label for="email">Email Address</label><br><br>
-            <input type="text" class="fullname"> <input type="button" value="Change" class="btn">
+            <input type="text"  class="email"> <input type="button" value="Change" class="btn">
             <p>We'll send you an email to verify your request to change your email address</p>
             <br><br>
             <div class="userLocation">
-                <div><label for="passwrd"> Current Password</label><br><br>
-                    <input type="password"><br></div>
+                <div><label for="passwrd"> Current Password</label><br>
+                    <input type="password" class="password"><br></div>
                 
                 <div> 
-                    <label for="passwrd">New Password</label><br><br>
-                <input type="password">
+                    <label for="passwrd">New Password</label><br>
+                <input type="password" class="password">
                 </div>
 
             </div>
             <br><br>
             <div>
-                <label for="password">Confirm Password</label><br><br>
-                <input type="password">
+                <label for="password">Confirm Password</label><br>
+                <input type="password" class="password">
                 <input type="button" value="Change password" class="btn">
 
             </div>
 
             <p>Two-step verification</p>
-            <p>Require a securtiy key r codein addition to your password</p>
-            <input type="checkbox" name="" id="">
-            <br><br><br>
-            <div>
-                <input type="button" value="Reset"class="button btn">
-                <input type="button" value="Update"class="button btn">
+            <div style="display: flex;">
+                <p>Require a securtiy key r codein addition to your password</p>
+                <input type="checkbox" name="checkme" id="checkme">  
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <div class="button">
+                <input type="button" value="Reset"class=" btn">
+                <input type="button" value="Update"class=" btn">
             </div>
            
         </form>
