@@ -3,8 +3,10 @@ from django.shortcuts import render,redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import csrf_exempt
 
 from django.contrib.auth import authenticate, login, logout
+
 
 from .forms import UserCreation
 
@@ -14,10 +16,12 @@ from .forms import UserCreation
 def index(request):
     return render(request, 'index.html')
 
+
 @login_required(login_url='login')
 def indexuser(request):
     return render(request, 'indexuser.html' )
 
+@csrf_exempt
 def loginpage(request):
     if request.user.is_authenticated:
         return redirect('users:indexuser')
@@ -41,6 +45,7 @@ def loginpage(request):
 # def register(request):
 #     return render(request, 'registration.html')
 
+@csrf_exempt
 def register(request): 
     if request.user.is_authenticated:
         return redirect('users:indexuser')
