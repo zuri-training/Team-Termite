@@ -28,7 +28,6 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS = ['https://team-termite-1-production.up.railway.app/'],
 ALLOWED_HOSTS = ['team-termite-1-production.up.railway.app'],
 
-CORS_ORIGIN_WHITELIST = ['https://team-termite-1-production.up.railway.app/']
 
 
 # Application definition
