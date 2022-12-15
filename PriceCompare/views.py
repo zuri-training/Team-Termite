@@ -5,7 +5,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth import authenticate, login, logout
-from django.views.decorators.csrf import requires_csrf_token
+
+
 from .forms import UserCreation
 
 
@@ -19,7 +20,7 @@ def index(request):
 def indexuser(request):
     return render(request, 'indexuser.html' )
 
-@requires_csrf_token
+
 def loginpage(request):
     if request.user.is_authenticated:
         return redirect('users:indexuser')
@@ -43,7 +44,7 @@ def loginpage(request):
 # def register(request):
 #     return render(request, 'registration.html')
 
-@requires_csrf_token
+
 def register(request): 
     if request.user.is_authenticated:
         return redirect('users:indexuser')

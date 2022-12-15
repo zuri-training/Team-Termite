@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-e&(7&1ojr!d9icqihg-l29)@c=ac0&z!htuo$3fno1)p30hmoc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-CSRF_TRUSTED_ORIGINS = ['https://team-termite-1-production.up.railway.app/'],
-ALLOWED_HOSTS = ['team-termite-1-production.up.railway.app'],
+
+ALLOWED_HOSTS = ['*'],
 
 
 
