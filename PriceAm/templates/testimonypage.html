@@ -30,7 +30,7 @@ margin-left: 400px;
     font-family: 'Nunito';   
 }
 .wrapper{
-    width: 70%;
+    {% comment %} width: 70%; {% endcomment %}
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -98,6 +98,12 @@ margin-left: 400px;
     font-style: normal;
     font-weight: 500;
 } 
+
+@media only screen and (max-width: 768px){
+    h2{
+        margin-left:10px;
+    }
+}
 </style>
 
 <body>
@@ -236,7 +242,7 @@ margin-left: 400px;
         <div>
             <h3><a href="{% url 'users:faqs'%}">FAQs </a></h3>
             <a href="{% url 'users:testimony'%}">Testimony </a><br>
-            <a href="#">Contact Us</a><br> 
+            <a href="{% url 'users:contact'%}">Contact Us</a><br> 
             <a href="{% url 'users:faqs'%}">How to Shop on priceam</a><br>
             <a href="{% url 'users:faqs'%}">What is priceam</a><br>
         </div>

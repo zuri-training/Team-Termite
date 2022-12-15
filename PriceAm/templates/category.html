@@ -27,9 +27,9 @@
                         <img src="{% static 'images/registration/logo.png'%}" >
                     </div>
                     <div><li><a href="{% url 'users:index'%}">Home</a></li>
-                        <li><a href="#"onclick="alert('Please Login to access the page')" disabled>Deals</a></li>
+                        <li><a href="#">Deals</a></li>
                         <li><a href="#" >Categories</a></li>
-                        <li><a href="#"onclick="alert('Please Login to access the page')">Stores</a></li></div>
+                        <li><a href="#">Stores</a></li></div>
                     
                         <div>{% if request.user.is_authenticated %}
                             <li><a href="#">{{user.username}}'s Dashboard <img src="{% static 'images/landingpage/Vector.png'%}" style="width:15%"></a></li>
