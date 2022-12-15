@@ -695,6 +695,9 @@ h4 {
     .filter input[type="submit"]{
         margin-top: 5px;
     }
+    .filter{
+        width: 90%;
+    }
 .submain{
     width: 90%;
     flex-wrap: wrap;
