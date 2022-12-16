@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap');
+
+body{
+    background-color: rgb(255, 255, 255)
+    ;
+    position: relative;
+    padding-left: 0%;
+    font-family: 'Nunito'
+}
+
+header{
+    display: flex;
+    background-color: #fff;
+    align-items: stretch;
+    justify-content: space-around;
+    /* position: relative; */
+    color:rgb(88, 88, 88);
+
+
+
+}
+
+.logo{
+    top: 5px;
+    left: 30px;
+    padding: 0;
+    flex-grow: 0;
+    position: absolute;
+    align-self: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width:180px ;
+    height: 43.9987907409668px;
+
+
+}
+.svg{
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    position: relative;
+}
+.div3{
+    display: flex;
+    gap: 9%;
+    line-height:%;
+}
+
+.link{
+    display: flex;
+    top:34px;
+    left: 406px;
+    width: 399px;
+    /* position: absolute; */
+    align-items: center;
+    justify-content: space-between;
+
+}
+main{
+    background-color: rgb(235, 230, 230);
+     padding:15px 15px 15px 15px;
+    display: flex;
+    padding-left: 50px;
+    gap: 1%;
+}
+
+.form1{
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top: px;
+    padding-bottom: 3%;
+    width: 600px;
+    border-radius: 4px;
+}
+
+.imgBox{
+  border: 2px;
+  background-color: rgb(255, 255, 255);
+  height: 120px;
+  width: 100px;
+  border-style: dotted;
+  border-color: #05A95C;
+}
+.fullname{
+    width: 550px;
+    height: 35px;
+}
+.box{
+ width: 260px; 
+}
+input{
+    height: 35px;
+    border-radius: 6px;
+    border-width: 1px;
+    background-color: rgba(240, 239, 239, 0.767);
+    border:;
+    color: rgb(236, 232, 232);
+    padding-left:10px ;
+    border-color: rgb(216, 213, 213);
+    border-top: 2px;
+    border-left: 2px;
+    box-shadow: none;
+    border-bottom: 2px;
+    border-right: 2px;
+}
+
+.userLocation{
+    display: flex;
+     gap: 4%;
+}
+h2{
+    padding-top: 3%;
+}
+
+.button{
+    margin-left:270px;
+}
+.btn{
+    background-color: #05A95C;
+    width: 150px;
+    
+
+}
+textarea{
+    background-color: rgba(240, 239, 239, 0.767);
+    border:;
+    color: rgb(236, 232, 232);
+    padding-left:10px ;
+    padding-top: 10px;
+    border-color: rgb(216, 213, 213);
+    border-top: 2px;
+    border-left: 2px;
+    box-shadow: none;
+    border-bottom: 2px;
+    border-right: 2px;
+}
+.form2{
+    background-color: #fff; 
+    padding-bottom: 3%;
+    width: 600px; 
+    padding-left: 1%;
+    border-radius: 4px;
+}
+.password{
+    width: 260px;
+}
+.email{
+    width: 400px;
+}
