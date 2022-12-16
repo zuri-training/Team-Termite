@@ -16,8 +16,9 @@
         </div>
         <div class="link">
            <p>Overview</p>
-          <a href="../templates/dashboardcompare"><p>Compare Price</p></a> 
-           <a href="../templates/dashboardsettings.html"><p>Settings</p></a>
+          <a href="{% url 'users:dashboard'%}"><p>Compare Price</p></a> 
+           <a href="{% url 'users:dashboardsetting'%}"><p>Settings</p></a>
+           <a href="{% url 'users:indexuser'%}"><p>Home</p></a>
         </div>
         <div class="div3">
             <img src="{% static 'images/dashboard/dp.png'%}" style="width: 35px;height:35px" alt=""class="svg">

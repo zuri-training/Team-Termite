@@ -15,9 +15,10 @@
            <img src="{% static 'images/registration/logo.png'%}" style="" class="logo">
         </div>
         <div class="link">
-           <a href="../templates/dashboardoverview.html"><p>Overview</p></a>
-           <a href="../templates/dashboardsettings.html"><p>Compare Price</p></a>
+           <a href="{% url 'users:Dashboard'%}"><p>Overview</p></a>
+           <a href="{% url 'users:dashboardsetting'%}"><p>Compare Price</p></a>
            <p>Settings</p>
+           <a href="{% url 'users:indexuser'%}"><p>Home</p></a>
         </div>
         <div class="div3">
             <img src="{% static 'images/dashboard/dp.png'%}" style="width: 35px;height:35px" alt=""class="svg">
