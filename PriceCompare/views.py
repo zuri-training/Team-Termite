@@ -83,3 +83,21 @@ def category(request):
 @login_required(login_url='login')
 def dashboardcompare(request):
     return render(request, 'dashboardcompare.html')
+
+@login_required(login_url='login')
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+@login_required(login_url='login')
+def dashboardsetting(request):
+    return render(request, 'dashboardsetting.html')
+
+
+@login_required(login_url='login')
+def deals(request):
+    return render(request, 'deals.html')
+
+
+@login_required(login_url='login')
+def stores(request):
+    return render(request,'stores.html')

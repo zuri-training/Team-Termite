@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/dashboards.css' %}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <div>
+           <img src="{% static 'images/registration/logo.png'%}" style="" class="logo">
+        </div>
+        <div class="link">
+            <a href="{% url 'users:indexuser'%}"><p>Home</p></a>
+           <a href="{% url 'users:Dashboard'%}"><p>Overview</p></a>
+           <a href="{% url 'users:dashboardsetting'%}"><p>Compare Price</p></a>
+           <p>Settings</p>
+           
+        </div>
+        <div class="div3">
+            <img src="{% static 'images/dashboard/dp.png'%}" style="width: 35px;height:35px" alt=""class="svg">
+           <div style="line-height: 0%;"><h3>{{user.username}}</h3>
+           <p>Active</p></div>
+           <div style="line-height: 2%;"><img src="{% static 'images/dashboard/alert.png'%}" alt=""class="svg"></div>
+           <div><a href="{% url 'logout' %}"<img src="{% static 'images/dashboard/Logout.png'%}" alt=""class="svg"></a></div>
+        </div>
+
+    </header>
+    <main class="Main">
+        <section class="form1">
+            <div >
+                <h2>Profile Details</h2>
+                <p>Edit your profile details here</p>
+            </div>
+            <div >
+                <input type="file"  name="myImage" accept="image/png, image/gif, image/jpeg" src="" alt="" class="imgBox" placeholder="Insert Image">
+            </div><br><br>
+            <div>
+                <form action="">
+                    <label for="Full Name">Full Name</label><br><br>
+                    <input type="text" placeholder="Enter you name" class="fullname">
+                    <br><br>
+                 <div class="userLocation">
+                    <div >
+                    <label for="Username">User Name</label><br><br>
+                    <input type="text" placeholder="Brooooch" class="box"></div>
+                    <div>
+                        <label for="Location">Location</label><br><br>
+                        <input type="text" placeholder="Lagos, Nigeria" class="box">
+                    </div>
+                 </div><br><br><br>
+                 <label for="bio"> Bio</label><br><br>
+                 <textarea name="Tellus" id="" cols="72" rows="10" placeholder="Tell us about yourself"></textarea><br><br><br>
+
+                 <div class="button">
+                    <input type="button" value="Reset" class="btn">
+                    <input type="button" value="Update" class="btn">
+                 </div>
+
+                </form>
+            </div>
+        </section>
+      <section class="form2">
+        <h2>Login & Security</h2>
+        <p>Change your account security details</p>
+        <form action="">
+            <label for="email">Email Address</label><br><br>
+            <input type="text"  class="email"> <input type="button" value="Change" class="btn">
+            <p>We'll send you an email to verify your request to change your email address</p>
+            <br><br>
+            <div class="userLocation">
+                <div><label for="passwrd"> Current Password</label><br>
+                    <input type="password" class="password"><br></div>
+                
+                <div> 
+                    <label for="passwrd">New Password</label><br>
+                <input type="password" class="password">
+                </div>
+
+            </div>
+            <br><br>
+            <div>
+                <label for="password">Confirm Password</label><br>
+                <input type="password" class="password">
+                <input type="button" value="Change password" class="btn">
+
+            </div>
+
+            <p>Two-step verification</p>
+            <div style="display: flex;">
+                <p>Require a securtiy key r codein addition to your password</p>
+                <input type="checkbox" name="checkme" id="checkme">  
+            </div>
+
+            <br><br><br><br><br><br><br><br><br><br><br>
+            <div class="button">
+                <input type="button" value="Reset"class=" btn">
+                <input type="button" value="Update"class=" btn">
+            </div>
+           
+        </form>
+      </section>
+    </main>
+</body>
+</html>

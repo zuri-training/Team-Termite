@@ -14,5 +14,9 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('category', views.category,name='category'),
     path('dashboardcompare', views.dashboardcompare, name='dashboardcompare'),
+    path('dashboard', views.dashboard, name='dashboard'),
+    path('dashboardsetting', views.dashboardsetting, name='dashboardsetting'),
+    path('deals', views.deals, name='deals'),
+    path('stores', views.stores, name='stores')
     
 ]
