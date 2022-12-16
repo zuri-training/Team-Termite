@@ -32,7 +32,7 @@
                                           <li><a href="{% url 'users:category'%}" >Categories</a></li>
                                           <li><a href="#">Stores</a></li></div>
                                       <div>
-                                        <li><a href="#">{{user.username}}'s Dashboard <img src="{% static 'images/landingpage/Vector.png'%}" style="width:15%"></a></li>
+                                        <li><a href="{% url 'users:dashboardcompare' %}">{{user.username}}'s Dashboard <img src="{% static 'images/landingpage/Vector.png'%}" style="width:15%"></a></li>
                                           <li><a href="{% url 'logout' %}" class="login">Logout</a></li>
                                       </div>
                                   </ul>
