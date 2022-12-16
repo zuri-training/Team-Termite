@@ -13,5 +13,6 @@ urlpatterns = [
     path('faqs/', views.faqs, name='faqs'),
     path('contact', views.contact, name='contact'),
     path('category', views.category,name='category'),
+    path('dashboardcompare', views.dashboardcompare, name='dashboardcompare'),
     
 ]

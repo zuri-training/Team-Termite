@@ -78,3 +78,8 @@ def contact(request):
 
 def category(request):
     return render(request, 'category.html')
+
+
+@login_required(login_url='login')
+def dashboardcompare(request):
+    return render(request, 'dashboardcompare.html')
