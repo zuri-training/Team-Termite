@@ -83,14 +83,25 @@ WSGI_APPLICATION = 'PriceAm.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'termites',
+#         'USER': 'postgres',
+#         'PASSWORD': 'oladan',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'termites',
+        'NAME': 'railway',
         'USER': 'postgres',
-        'PASSWORD': 'oladan',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'PASSWORD': 'JbYG6XE2DchSh5nnedxQ',
+        'HOST': 'containers-us-west-156.railway.app',
+        'PORT': '6957',
     }
 }
 
