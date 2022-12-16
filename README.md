@@ -1,4 +1,5 @@
 # PriceAm
+<a href="http://team-termite-1.up.railway.app/" target="_blank"><b>Live Hosted Link</b></a>
 ## Table of Contents
    - <a href="https://github.com/zuri-training/Team-Termite##Introduction">Introduction</a>
    - <a href="https://github.com/zuri-training/Team-Termite##Features">Features</a>
@@ -121,6 +122,7 @@ git push origin {branchname}
 - <a href="https://docs.google.com/document/d/1n3uDvnyK9Jy0EoOCXK6DvzdXekHqs_2kNNMZQelMB_E/edit?usp=sharing" target="_blank">Design Sketch</a>
 - <a href="https://github.com/zuri-training/Team-Termite" target="_blank">Github Repo link</a>
 - <a href="https://docs.google.com/document/d/1uZacACc6Zj4Rh7XlCHc4kKOTLsaEJrI78xFQSa-lH08" target="_blank">Project Documenation</a>
+- <a href="http://team-termite-1.up.railway.app/" target="_blank"><b>Live Hosted Link</b></a>
 
 
 
